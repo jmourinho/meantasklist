@@ -14,11 +14,11 @@ export class IssueService {
 
   /* Get Issues */
   getIssues(){
-    return this.http.get('${this.uri}/issues');
+    return this.http.get(this.uri + '/issues');
   }
 
   getIssueById(id){
-    return this.http.get('${this.uri}/issues/${id}');
+    return this.http.get(this.uri + 'issues/${id}');
   }
 
   /* Add Issues */
@@ -29,7 +29,7 @@ export class IssueService {
       description: description,
       severity: severity
     };
-    return this.http.post('${this.uri}/issues/add', issue);
+    return this.http.post(this.uri + '/issues/add', issue);
   }
   
   /* Update Issues */
@@ -41,12 +41,12 @@ export class IssueService {
       severity: severity,
       status: status
     };
-    return this.http.post(`${this.uri}/issues/update/${id}`, issue);
+    return this.http.post(this.uri + '/issues/update/${id}', issue);
   }
 
   /* Delete Issues */
   deleteIssue(id) {
-    return this.http.get(`${this.uri}/issues/delete/${id}`);
+    return this.http.get(this.uri + '/issues/delete/${id}');
   }
 
   

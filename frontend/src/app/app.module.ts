@@ -10,6 +10,7 @@ import { ListComponent } from './components/list/list.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule, 
   MatFormFieldModule, 
   MatInputModule, 
@@ -49,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatTableModule,
     MatDividerModule,
-    MatSnackBarModule   
+    MatSnackBarModule,
+    ReactiveFormsModule   
   ],
   providers: [IssueService],
   bootstrap: [AppComponent]
